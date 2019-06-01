@@ -31,4 +31,12 @@ public class DemoResource {
         }
         return "Still relying in existing / legacy RDBMS backend implementation";
     }
+
+    @GetMapping(value = "/demo-cms/{id}")
+    public String getDemoCms(@PathVariable("id") String id) {
+        if (FeatureToggles.CONTENT_RETRIEVAL_VIA_CMS.isActive()) {
+            return "New CMS Backend is active";
+        }
+        return "Still relying in existing / legacy cms backend implementation";
+    }
 }
