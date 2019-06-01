@@ -18,7 +18,7 @@ mvn clean spring-boot:run
 #### Available URLs
 ```
 curl -v "http://localhost:8080/api/demo-cms/0"
-curl -v "http://localhost:8080/api/demo-es/0
+curl -v "http://localhost:8080/api/demo-es/0"
 curl -v "http://localhost:8080/api/demo-someservice/0"
 ```
 
