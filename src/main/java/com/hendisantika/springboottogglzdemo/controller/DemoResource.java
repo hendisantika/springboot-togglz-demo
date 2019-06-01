@@ -39,4 +39,9 @@ public class DemoResource {
         }
         return "Still relying in existing / legacy cms backend implementation";
     }
+
+    @GetMapping(value = "/demo-someservice/{id}")
+    public String getDemoSomeService(@PathVariable("id") String id) {
+        return this.someService.getSomeValue();
+    }
 }
